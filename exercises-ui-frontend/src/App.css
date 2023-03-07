@@ -1,0 +1,181 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+          /* Add fonts from the app's server 
+@font-face {                
+  font-family: 'FontName';
+  src: url('FontName.woff2') format('woff2');
+} 
+          */                           
+
+          /* ...or hosted services like Google Fonts 
+@import url(//fonts.googleapis.com/css?family=Font+Name);
+          */
+
+          @import '../node_modules/modern-normalize/modern-normalize.css';
+          /* npm install modern-normalize 
+            Resets elements for browser consistancy.  
+            http://nicolasgallagher.com/about-normalize-css/ 
+          */
+
+          /* Component-specific stylesheets, if any 
+@import "component1.css";   
+          */
+
+/*   ----- Variables  -----  */
+:root {
+  --custom-color-name:black;
+  --custom-embellishment-name:black;
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {} or :root {} */
+  color:wheat;
+  background-color:rgb(79, 79, 79);
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:medium;
+  margin: 5%;
+  padding: 5%;
+}
+
+/* ----- Anchors ----- Text links */
+a {
+    text-decoration: none;
+  }
+  a:link {}
+  a:hover {
+  text-decoration: underline;
+  background-color:bisque;
+  }
+  a:active {}
+  a:visited {
+    color:#0371b4;
+  }
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    border: 1px solid black;
+    width: 15%;
+    color:purple;
+    background-color: aliceblue;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    vertical-align: middle;
+  }
+  nav a {
+    margin: 9px;
+    padding: 1px;
+  }
+
+/*  ----- Page layout blocks -----  */
+header {
+    text-align: center;
+    background-color:gray;
+    color: wheat ;
+    border: black;
+    font-size: large;
+    font-weight: 200;
+    margin: 0px;
+    padding: 0px;
+}
+main {
+    text-align: left;
+    background-color: gray;
+    padding: 3%;
+    border: 0px;
+    padding: 10px;
+}
+section {}
+  article {}
+    #topic1 {}
+    #topic2 {}
+    #gallery1 {}
+    #gallery2 {}
+div {}
+aside {}
+footer {
+    text-align: center;
+    background-color: none ;
+    color: wheat ;
+    border: black;
+    font-size: small;
+    font-weight: 200;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*  ----- Table ----- */
+table {
+    width: 100%;
+    border: black;
+    border-collapse: collapse;
+    font-size: large;
+}
+caption {}
+thead {}
+tbody {}
+tfoot {}
+tr {
+background-color: rgb(107, 107, 107);
+padding: 5%;
+border: black ;
+}
+  tr:nth-child(even) {
+    background-color: rgb(145, 145, 145);
+    padding: 5%;
+    border: black ; 
+  }
+th {
+    background-color: rgb(145, 145, 145) ;
+    border: black ; 
+    padding: 10px;
+}
+td {}
+  td:nth-child(1) {}
+colgroup {}
+data {}
+datalist {}
+
+
+/*  ----- Form ----- */
+form, input, select {
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 5px;
+}
+fieldset {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    margin: 5%;
+    padding: 1em;
+    background-color: rgb(72, 66, 66);
+
+}
+  legend {}
+label {
+    display: block;
+}
+  button {}
+  output {}
+  meter {}
+  progress {}
+    optgroup {}
+    option {}
+  textarea {}
+
+
+
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
